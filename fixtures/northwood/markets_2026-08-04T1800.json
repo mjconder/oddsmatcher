@@ -1,0 +1,41 @@
+{
+  "book": "northwood",
+  "fetched_at": "2026-08-04T18:00:00Z",
+  "markets": [
+    {
+      "sport": "soccer",
+      "home": "Man. City",
+      "away": "Bournemouth",
+      "start_date": "2026-08-05",
+      "market": "match_winner",
+      "outcomes": [
+        { "label": "home", "price": 1.46 },
+        { "label": "draw", "price": 4.8 },
+        { "label": "away", "price": 5.5 }
+      ]
+    },
+    {
+      "sport": "soccer",
+      "home": "Newcastle Utd",
+      "away": "LFC",
+      "start_date": "2026-08-05",
+      "market": "match_winner",
+      "outcomes": [
+        { "label": "home", "price": 3.0 },
+        { "label": "draw", "price": 3.85 },
+        { "label": "away", "price": 2.1 }
+      ]
+    },
+    {
+      "sport": "mlb",
+      "home": "Yankees",
+      "away": "Cardinals",
+      "start_date": "2026-08-05",
+      "market": "moneyline",
+      "outcomes": [
+        { "label": "home", "price": 1.3 },
+        { "label": "away", "price": 3.6 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "book": "northwood",
+  "fetched_at": "2026-08-04T17:40:00Z",
+  "markets": [
+    {
+      "sport": "mlb",
+      "home": "Cubs",
+      "away": "Dodgers",
+      "start_date": "2026-08-05",
+      "market": "moneyline",
+      "outcomes": [
+        { "label": "home", "price": 2.6 },
+        { "label": "away", "price": 1.53 }
+      ]
+    }
+  ]
+}

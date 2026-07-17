@@ -1,0 +1,91 @@
+{
+  "exchange": "openline",
+  "captured_at": "2026-08-04T18:01:00+00:00",
+  "markets": [
+    {
+      "market_id": "1.241553091",
+      "sport": "soccer",
+      "market_type": "match_winner",
+      "event": {
+        "home": "Manchester City",
+        "away": "Bournemouth",
+        "start_date": "2026-08-05"
+      },
+      "runners": [
+        {
+          "selection": "home",
+          "back": [
+            { "price": 1.44, "size": 3200.0 },
+            { "price": 1.43, "size": 5400.0 }
+          ],
+          "lay": [{ "price": 1.51, "size": 1800.0 }]
+        },
+        {
+          "selection": "draw",
+          "back": [{ "price": 4.9, "size": 640.0 }],
+          "lay": [{ "price": 5.15, "size": 410.0 }]
+        },
+        {
+          "selection": "away",
+          "back": [{ "price": 5.75, "size": 520.0 }],
+          "lay": [{ "price": 6.04, "size": 300.0 }]
+        }
+      ]
+    },
+    {
+      "market_id": "1.241553218",
+      "sport": "soccer",
+      "market_type": "match_winner",
+      "event": {
+        "home": "Newcastle United",
+        "away": "Liverpool",
+        "start_date": "2026-08-05"
+      },
+      "runners": [
+        {
+          "selection": "home",
+          "back": [{ "price": 3.1, "size": 900.0 }],
+          "lay": [{ "price": 3.26, "size": 560.0 }]
+        },
+        {
+          "selection": "draw",
+          "back": [{ "price": 3.8, "size": 720.0 }],
+          "lay": [{ "price": 3.99, "size": 480.0 }]
+        },
+        {
+          "selection": "away",
+          "back": [
+            { "price": 2.07, "size": 1500.0 },
+            { "price": 2.06, "size": 2400.0 }
+          ],
+          "lay": [{ "price": 2.17, "size": 950.0 }]
+        }
+      ]
+    },
+    {
+      "market_id": "1.241560774",
+      "sport": "mlb",
+      "market_type": "moneyline",
+      "event": {
+        "home": "Chicago Cubs",
+        "away": "Los Angeles Dodgers",
+        "start_date": "2026-08-05"
+      },
+      "runners": [
+        {
+          "selection": "home",
+          "back": [{ "price": 2.66, "size": 780.0 }],
+          "lay": [{ "price": 2.79, "size": 460.0 }]
+        },
+        {
+          "selection": "away",
+          "back": [
+            { "price": 1.52, "size": 1900.0 },
+            { "price": 1.51, "size": 3100.0 }
+          ],
+          "lay": [{ "price": 1.6, "size": 1100.0 }]
+        }
+      ]
+    }
+  ]
+}

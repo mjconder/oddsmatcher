@@ -1,0 +1,52 @@
+{
+  "provider": "stateline",
+  "generated_ts": 1785866520000,
+  "lines": [
+    {
+      "league": "EPL",
+      "home_team": "Man City",
+      "away_team": "Bournemouth",
+      "game_date": "2026-08-05",
+      "bet_type": "3way_moneyline",
+      "prices": [
+        { "side": "home", "american": -250 },
+        { "side": "draw", "american": 400 },
+        { "side": "away", "american": 500 }
+      ]
+    },
+    {
+      "league": "EPL",
+      "home_team": "Newcastle",
+      "away_team": "Liverpool FC",
+      "game_date": "2026-08-05",
+      "bet_type": "3way_moneyline",
+      "prices": [
+        { "side": "home", "american": 220 },
+        { "side": "draw", "american": 275 },
+        { "side": "away", "american": 105 }
+      ]
+    },
+    {
+      "league": "MLB",
+      "home_team": "Chi Cubs",
+      "away_team": "LA Dodgers",
+      "game_date": "2026-08-05",
+      "bet_type": "moneyline",
+      "prices": [
+        { "side": "home", "american": 170 },
+        { "side": "away", "american": -200 }
+      ]
+    },
+    {
+      "league": "MLB",
+      "home_team": "NY Yankees",
+      "away_team": "St Louis Cardinals",
+      "game_date": "2026-08-05",
+      "bet_type": "moneyline",
+      "prices": [
+        { "side": "home", "american": -370 },
+        { "side": "away", "american": 280 }
+      ]
+    }
+  ]
+}
