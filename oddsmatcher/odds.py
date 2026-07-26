@@ -15,9 +15,7 @@ def decimal_to_implied(odds: float) -> float:
 def american_to_decimal(american: float) -> float:
     if american == 0:
         raise ValueError("american odds cannot be zero")
-    if american > 0:
-        return 1.0 + american / 100.0
-    return 1.0 + 100.0 / abs(american)
+    return 1.0 + american / 100.0
 
 
 def normalize_odds(raw: float | str, fmt: str) -> float:
