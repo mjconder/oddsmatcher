@@ -1,5 +1,7 @@
 from datetime import datetime, timezone
 
+import pytest
+
 from oddsmatcher.models import event_key, parse_timestamp, slugify, sport_slug
 from oddsmatcher.teams import canonical_team
 
@@ -38,3 +40,10 @@ def test_event_key_is_stable_across_casing():
         event_key("nba", "los angeles lakers", "BOSTON CELTICS", "2026-03-15")
     )
     assert slugify("Los Angeles Lakers") == slugify("los angeles lakers")
+
+
+def test_event_key_rejects_non_iso_date():
+    # A malformed date must fail where the key is built, not get baked into a
+    # key that silently never matches another book's.
+    with pytest.raises(ValueError):
+        event_key("mlb", "Chicago Cubs", "Los Angeles Dodgers", "08/05/2026")

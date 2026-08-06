@@ -226,3 +226,13 @@ class TestFixtureErrors:
         (tmp_path / "bad.json").write_text("{not json")
         with pytest.raises(SourceError, match="malformed"):
             StatelineSource(tmp_path).fetch_quotes()
+
+    def test_schema_error_becomes_source_error(self, tmp_path):
+        # Valid JSON but a missing required key is wrapped like malformed JSON,
+        # so a schema break surfaces as a SourceError naming the file rather
+        # than a raw KeyError from deep inside an adapter. This locks the base
+        # class's wrapping in: an adapter that reintroduced its own
+        # fetch_quotes would bypass it and fail here.
+        (tmp_path / "doc.json").write_text('{"markets": []}')  # no fetched_at
+        with pytest.raises(SourceError, match="malformed fixture doc.json"):
+            NorthwoodSource(tmp_path).fetch_quotes()
