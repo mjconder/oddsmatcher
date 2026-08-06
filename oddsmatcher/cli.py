@@ -13,7 +13,9 @@ from oddsmatcher.sources import (
     StatelineSource,
 )
 
-DEFAULT_FIXTURES = Path("fixtures")
+# Anchored to the repo checkout (fixtures/ sits beside the package), so
+# `oddsmatcher scan` works from any working directory, not just the root.
+DEFAULT_FIXTURES = Path(__file__).resolve().parent.parent / "fixtures"
 
 
 def build_sources(fixtures_root: Path) -> list[OddsSource]:
