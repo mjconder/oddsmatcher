@@ -11,7 +11,10 @@ never match the others, and its quotes silently drop out of the best-price
 comparison.
 """
 
-# Canonical spelling -> every raw spelling seen across the feeds.
+# Canonical spelling -> every raw spelling seen across the feeds. The bare
+# nicknames ("Cubs", "Dodgers", "Yankees") are safe only because the fixtures
+# cover a single league per sport, where each is unambiguous. Spanning leagues
+# that share a nickname would need the sport folded into the lookup key.
 _ALIASES: dict[str, tuple[str, ...]] = {
     "Manchester City": ("Man City", "Man. City"),
     "Bournemouth": ("AFC Bournemouth",),

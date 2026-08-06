@@ -59,6 +59,9 @@ def best_prices(
         best: dict[str, BestPrice] = {}
         for quote in members:
             current = best.get(quote.outcome)
+            # Strictly greater, so on equal prices the first source seen wins.
+            # `members` is grouped in source order, making the tie-break stable
+            # and deterministic rather than dependent on dict iteration.
             if current is None or quote.decimal_odds > current.decimal_odds:
                 best[quote.outcome] = BestPrice(
                     quote.decimal_odds, quote.source, quote.fetched_at

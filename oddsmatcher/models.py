@@ -2,7 +2,7 @@
 
 import re
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
@@ -30,7 +30,13 @@ def sport_slug(raw: str) -> str:
 
 
 def event_key(sport: str, home: str, away: str, start_date: str) -> str:
-    """Canonical event identifier, stable across bookmakers."""
+    """Canonical event identifier, stable across bookmakers.
+
+    ``start_date`` must be an ISO-8601 date (``YYYY-MM-DD``). It is validated
+    here so a malformed date raises loudly at the source, rather than being
+    baked into a key that just silently never matches another book's.
+    """
+    date.fromisoformat(start_date)
     return f"{slugify(sport)}:{start_date}:{slugify(away)}@{slugify(home)}"
 
 
