@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Fast local gate: lint, type-check, and test before allowing a commit.
+# Enable once per clone with:  git config core.hooksPath .githooks
+# (The full Docker build + in-container test run happens in CI on push.)
+set -e
+echo "pre-commit: ruff..."
+ruff check .
+ruff format --check .
+echo "pre-commit: mypy..."
+mypy oddsmatcher
+echo "pre-commit: pytest..."
+python -m pytest -q
